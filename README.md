@@ -9,7 +9,8 @@ I consider the results from this extremely interesting as not only does `foreach
 
 I'd be highly interested in seeing some more result for different CPUs! (Just open an issue with your results if you're interested in this.)
 
-**Update**: `For` + `in Span` seems to be a bad combo. Added some more benchmarks to test the differences between the code generated for the `foreach` and the `for`. But `forach` is still the best (the gap is way smaller though).
+**Update**: TIL `For` + `in Span` is a bad combo (which in hindsight is quite logical).   
+Added some more benchmarks to test the differences between the code generated for the `foreach` and the `for`. But `forach` is still the best (the gap is way smaller though).
 
 ## Results
 
