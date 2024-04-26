@@ -41,4 +41,71 @@ public class Benchmarks
 
     [Benchmark]
     public void FullPtr() => ColorSort.SortRedFullPtr(_iterationColors);
+
+    [Benchmark]
+    public void ForCopyLocal() => ColorSort.SortRedForCopyLocal(_iterationColors);
+
+    [Benchmark]
+    public void ForeachCopyLocal() => ColorSort.SortRedForeachCopyLocal(_iterationColors);
+
+    [Benchmark]
+    public void UnsafeAddCopyLocal() => ColorSort.SortRedUnsafeAddCopyLocal(_iterationColors);
+
+    [Benchmark]
+    public void PtrCopyLocal() => ColorSort.SortRedPtrCopyLocal(_iterationColors);
+
+    [Benchmark]
+    public void FullPtrCopyLocal() => ColorSort.SortRedFullPtrCopyLocal(_iterationColors);
+
+    [Benchmark]
+    public void ForNoIn() => ColorSort.SortRedForNoIn(_iterationColors);
+
+    [Benchmark]
+    public void ForeachNoIn() => ColorSort.SortRedForeachNoIn(_iterationColors);
+
+    [Benchmark]
+    public void UnsafeAddNoIn() => ColorSort.SortRedUnsafeAddNoIn(_iterationColors);
+
+    [Benchmark]
+    public void PtrNoIn() => ColorSort.SortRedPtrNoIn(_iterationColors);
+
+    [Benchmark]
+    public void FullPtrNoIn() => ColorSort.SortRedFullPtrNoIn(_iterationColors);
+
+
+    [Benchmark]
+    public void ForReverseIncrements() => ColorSort.SortRedForReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void ForeachReverseIncrements() => ColorSort.SortRedForeachReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void UnsafeAddReverseIncrements() => ColorSort.SortRedUnsafeAddReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void PtrReverseIncrements() => ColorSort.SortRedPtrReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void ForCopyLocalReverseIncrements() => ColorSort.SortRedForCopyLocalReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void ForeachCopyLocalReverseIncrements() => ColorSort.SortRedForeachCopyLocalReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void UnsafeAddCopyLocalReverseIncrements() => ColorSort.SortRedUnsafeAddCopyLocalReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void PtrCopyLocalReverseIncrements() => ColorSort.SortRedPtrCopyLocalReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void ForNoInReverseIncrements() => ColorSort.SortRedForNoInReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void ForeachNoInReverseIncrements() => ColorSort.SortRedForeachNoInReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void UnsafeAddNoInReverseIncrements() => ColorSort.SortRedUnsafeAddNoInReverseIncrements(_iterationColors);
+
+    [Benchmark]
+    public void PtrNoInReverseIncrements() => ColorSort.SortRedPtrNoInReverseIncrements(_iterationColors);
 }
