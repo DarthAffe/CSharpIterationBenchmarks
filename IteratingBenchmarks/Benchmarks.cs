@@ -27,11 +27,13 @@ public class Benchmarks
         Array.Copy(_randomData, _iterationColors, _iterationColors.Length);
     }
 
-    [Benchmark]
-    public void For() => ColorSort.SortRedFor(_iterationColors);
+    // ----------------------------------------------------------------------------
 
     [Benchmark]
     public void Foreach() => ColorSort.SortRedForeach(_iterationColors);
+
+    [Benchmark]
+    public void For() => ColorSort.SortRedFor(_iterationColors);
 
     [Benchmark]
     public void UnsafeAdd() => ColorSort.SortRedUnsafeAdd(_iterationColors);
@@ -41,6 +43,8 @@ public class Benchmarks
 
     [Benchmark]
     public void FullPtr() => ColorSort.SortRedFullPtr(_iterationColors);
+
+    // ----------------------------------------------------------------------------
 
     [Benchmark]
     public void ForCopyLocal() => ColorSort.SortRedForCopyLocal(_iterationColors);
@@ -57,55 +61,37 @@ public class Benchmarks
     [Benchmark]
     public void FullPtrCopyLocal() => ColorSort.SortRedFullPtrCopyLocal(_iterationColors);
 
-    [Benchmark]
-    public void ForNoIn() => ColorSort.SortRedForNoIn(_iterationColors);
+    // ----------------------------------------------------------------------------
 
     [Benchmark]
-    public void ForeachNoIn() => ColorSort.SortRedForeachNoIn(_iterationColors);
+    public void ForeachIn() => ColorSort.SortRedForeachIn(_iterationColors);
 
     [Benchmark]
-    public void UnsafeAddNoIn() => ColorSort.SortRedUnsafeAddNoIn(_iterationColors);
+    public void ForIn() => ColorSort.SortRedForIn(_iterationColors);
 
     [Benchmark]
-    public void PtrNoIn() => ColorSort.SortRedPtrNoIn(_iterationColors);
+    public void UnsafeAddIn() => ColorSort.SortRedUnsafeAddIn(_iterationColors);
 
     [Benchmark]
-    public void FullPtrNoIn() => ColorSort.SortRedFullPtrNoIn(_iterationColors);
-
-
-    [Benchmark]
-    public void ForReverseIncrements() => ColorSort.SortRedForReverseIncrements(_iterationColors);
+    public void PtrIn() => ColorSort.SortRedPtrIn(_iterationColors);
 
     [Benchmark]
-    public void ForeachReverseIncrements() => ColorSort.SortRedForeachReverseIncrements(_iterationColors);
+    public void FullPtrIn() => ColorSort.SortRedFullPtrIn(_iterationColors);
+
+    // ----------------------------------------------------------------------------
 
     [Benchmark]
-    public void UnsafeAddReverseIncrements() => ColorSort.SortRedUnsafeAddReverseIncrements(_iterationColors);
+    public void ForInCopyLocal() => ColorSort.SortRedForInCopyLocal(_iterationColors);
 
     [Benchmark]
-    public void PtrReverseIncrements() => ColorSort.SortRedPtrReverseIncrements(_iterationColors);
+    public void ForeachInCopyLocal() => ColorSort.SortRedForeachInCopyLocal(_iterationColors);
 
     [Benchmark]
-    public void ForCopyLocalReverseIncrements() => ColorSort.SortRedForCopyLocalReverseIncrements(_iterationColors);
+    public void UnsafeAddIdCopyLocal() => ColorSort.SortRedUnsafeAddInCopyLocal(_iterationColors);
 
     [Benchmark]
-    public void ForeachCopyLocalReverseIncrements() => ColorSort.SortRedForeachCopyLocalReverseIncrements(_iterationColors);
+    public void PtrInCopyLocal() => ColorSort.SortRedPtrInCopyLocal(_iterationColors);
 
     [Benchmark]
-    public void UnsafeAddCopyLocalReverseIncrements() => ColorSort.SortRedUnsafeAddCopyLocalReverseIncrements(_iterationColors);
-
-    [Benchmark]
-    public void PtrCopyLocalReverseIncrements() => ColorSort.SortRedPtrCopyLocalReverseIncrements(_iterationColors);
-
-    [Benchmark]
-    public void ForNoInReverseIncrements() => ColorSort.SortRedForNoInReverseIncrements(_iterationColors);
-
-    [Benchmark]
-    public void ForeachNoInReverseIncrements() => ColorSort.SortRedForeachNoInReverseIncrements(_iterationColors);
-
-    [Benchmark]
-    public void UnsafeAddNoInReverseIncrements() => ColorSort.SortRedUnsafeAddNoInReverseIncrements(_iterationColors);
-
-    [Benchmark]
-    public void PtrNoInReverseIncrements() => ColorSort.SortRedPtrNoInReverseIncrements(_iterationColors);
+    public void FullPtrInCopyLocal() => ColorSort.SortRedFullPtrInCopyLocal(_iterationColors);
 }
