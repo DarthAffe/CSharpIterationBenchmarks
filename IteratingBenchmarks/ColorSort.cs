@@ -26,12 +26,7 @@ public static class ColorSort
         }
 
         foreach (Color color in colors)
-        {
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
-        }
+            buckets[currentBucketIndex[color.Red]++] = color;
 
         buckets.CopyTo(colors);
 
@@ -60,10 +55,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = colors[i];
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -98,10 +90,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = Unsafe.Add(ref colorsReference, i);
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -133,12 +122,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -170,12 +154,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -207,12 +186,7 @@ public static class ColorSort
         }
 
         foreach (Color color in colors)
-        {
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
-        }
+            buckets[currentBucketIndex[color.Red]++] = color;
 
         buckets.CopyTo(colors);
 
@@ -243,10 +217,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = colors[i];
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -283,10 +254,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = Unsafe.Add(ref colorsReference, i);
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -320,12 +288,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -359,12 +322,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -394,12 +352,7 @@ public static class ColorSort
         }
 
         foreach (Color color in colors)
-        {
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
-        }
+            buckets[currentBucketIndex[color.Red]++] = color;
 
         buckets.CopyTo(colors);
 
@@ -428,10 +381,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = colors[i];
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -466,10 +416,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = Unsafe.Add(ref colorsReference, i);
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -501,12 +448,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -538,12 +480,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -575,12 +512,7 @@ public static class ColorSort
         }
 
         foreach (Color color in colors)
-        {
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
-        }
+            buckets[currentBucketIndex[color.Red]++] = color;
 
         buckets.CopyTo(colors);
 
@@ -611,10 +543,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = colors[i];
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -651,10 +580,7 @@ public static class ColorSort
         for (int i = 0; i < colors.Length; i++)
         {
             Color color = Unsafe.Add(ref colorsReference, i);
-            int index = color.Red;
-            int bucketIndex = currentBucketIndex[index];
-            currentBucketIndex[index]++;
-            buckets[bucketIndex] = color;
+            buckets[currentBucketIndex[color.Red]++] = color;
         }
 
         buckets.CopyTo(colors);
@@ -688,12 +614,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
@@ -727,12 +648,7 @@ public static class ColorSort
             }
 
             for (Color* color = ptr; color < end; color++)
-            {
-                int index = (*color).Red;
-                int bucketIndex = currentBucketIndex[index];
-                currentBucketIndex[index]++;
-                buckets[bucketIndex] = *color;
-            }
+                buckets[currentBucketIndex[(*color).Red]++] = (*color);
 
             buckets.CopyTo(colors);
 
