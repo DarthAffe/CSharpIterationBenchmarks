@@ -28,12 +28,12 @@ public class Benchmarks
     }
 
     // ----------------------------------------------------------------------------
+    
+    [Benchmark]
+    public void For() => ColorSort.SortRedFor(_iterationColors);
 
     [Benchmark]
     public void Foreach() => ColorSort.SortRedForeach(_iterationColors);
-
-    [Benchmark]
-    public void For() => ColorSort.SortRedFor(_iterationColors);
 
     [Benchmark]
     public void UnsafeAdd() => ColorSort.SortRedUnsafeAdd(_iterationColors);
@@ -62,12 +62,12 @@ public class Benchmarks
     public void FullPtrCopyLocal() => ColorSort.SortRedFullPtrCopyLocal(_iterationColors);
 
     // ----------------------------------------------------------------------------
+    
+    [Benchmark]
+    public void ForIn() => ColorSort.SortRedForIn(_iterationColors);
 
     [Benchmark]
     public void ForeachIn() => ColorSort.SortRedForeachIn(_iterationColors);
-
-    [Benchmark]
-    public void ForIn() => ColorSort.SortRedForIn(_iterationColors);
 
     [Benchmark]
     public void UnsafeAddIn() => ColorSort.SortRedUnsafeAddIn(_iterationColors);
