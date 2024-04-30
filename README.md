@@ -50,4 +50,28 @@ Still wondering, why the `in` + copy local variation outperforms the "normal" on
 
 ### Intel i7-11800H
 
-*outdated*
+| Method               | Mean     | Error     | StdDev    | Median   | Allocated |
+|--------------------- |---------:|----------:|----------:|---------:|----------:|
+| Foreach              | 2.094 ms | 0.0337 ms | 0.1629 ms | 2.043 ms |     736 B |
+| For                  | 2.069 ms | 0.0307 ms | 0.1473 ms | 2.022 ms |     736 B |
+| UnsafeAdd            | 2.076 ms | 0.0286 ms | 0.1378 ms | 2.035 ms |     736 B |
+| Ptr                  | 1.784 ms | 0.0226 ms | 0.1092 ms | 1.762 ms |     736 B |
+| FullPtr              | 1.790 ms | 0.0206 ms | 0.0999 ms | 1.759 ms |     736 B |
+|                      |          |           |           |          |           |
+| ForCopyLocal         | 2.036 ms | 0.0253 ms | 0.1225 ms | 2.004 ms |     736 B |
+| ForeachCopyLocal     | 2.054 ms | 0.0251 ms | 0.1212 ms | 2.023 ms |     736 B |
+| UnsafeAddCopyLocal   | 2.074 ms | 0.0257 ms | 0.1228 ms | 2.032 ms |     736 B |
+| PtrCopyLocal         | 1.776 ms | 0.0227 ms | 0.1087 ms | 1.742 ms |     736 B |
+| FullPtrCopyLocal     | 1.774 ms | 0.0242 ms | 0.1166 ms | 1.739 ms |     736 B |
+|                      |          |           |           |          |           |
+| ForeachIn            | 2.102 ms | 0.0372 ms | 0.1808 ms | 2.037 ms |     736 B |
+| ForIn                | 2.475 ms | 0.0338 ms | 0.1630 ms | 2.437 ms |     736 B |
+| UnsafeAddIn          | 2.059 ms | 0.0241 ms | 0.1159 ms | 2.029 ms |     736 B |
+| PtrIn                | 1.782 ms | 0.0290 ms | 0.1418 ms | 1.734 ms |     736 B |
+| FullPtrIn            | 1.797 ms | 0.0241 ms | 0.1155 ms | 1.785 ms |     736 B |
+|                      |          |           |           |          |           |
+| ForInCopyLocal       | 2.017 ms | 0.0235 ms | 0.1123 ms | 1.991 ms |     736 B |
+| ForeachInCopyLocal   | 2.055 ms | 0.0405 ms | 0.1971 ms | 1.982 ms |     736 B |
+| UnsafeAddIdCopyLocal | 2.068 ms | 0.0406 ms | 0.1977 ms | 1.992 ms |     736 B |
+| PtrInCopyLocal       | 1.752 ms | 0.0277 ms | 0.1340 ms | 1.711 ms |     736 B |
+| FullPtrInCopyLocal   | 1.780 ms | 0.0294 ms | 0.1426 ms | 1.725 ms |     736 B |
